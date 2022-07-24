@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import Navbar from "./Navbar";
+import NavBar from "./NavBar";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -11,6 +10,7 @@ function App() {
   return (
     <div>
       <Navbar setIsLoggedIn={setIsLoggedIn} />
+      <NavBar setIsLoggedIn={setIsLoggedIn} />
       <Switch>
         <Route exact path="/about">
           <About />
@@ -25,5 +25,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
